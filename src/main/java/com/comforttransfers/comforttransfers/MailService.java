@@ -14,8 +14,8 @@ public class MailService {
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo("comforttransfers001@gmail.com");
-        mailMessage.setFrom(email.getFrom());
-        mailMessage.setText(email.getMessage());
+        mailMessage.setSubject("Inquiry");
+        mailMessage.setText("From : " + email.getFrom() + "\n \n" + email.getMessage());
 
         mailSender.send(mailMessage);
         return email;
