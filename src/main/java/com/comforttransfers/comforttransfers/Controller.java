@@ -13,7 +13,7 @@ public class Controller {
     @Autowired
     private MailService service;
 
-    @CrossOrigin( origins = "https://comforttransfersmain.gatsbyjs.io")
+    @CrossOrigin( origins = "https://comfort-transfers.co.ke/")
     @PostMapping("/sendEmail")
     public ResponseEntity<Email> sendEmail(@RequestBody Email email){
         return ResponseEntity.ok().body(service.sendEmail(email));
